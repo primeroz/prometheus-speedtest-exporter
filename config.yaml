@@ -15,3 +15,5 @@ bearerAuth:
 scripts:
   - name: speedtest
     script: /usr/local/bin/speedtest-exporter.sh
+  - name: ping
+    script: /usr/local/bin/ping.sh

@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 ENV SPEEDTEST_VERSION=1.2.0
-ENV SCRIPT_EXPORTER_VERSION=v2.5.2
+ENV SCRIPT_EXPORTER_VERSION=v2.8.0
 
 RUN apk add tar curl ca-certificates bash
 
@@ -32,6 +32,7 @@ RUN ARCH=$(apk info --print-arch) && \
 
 COPY config.yaml config.yaml
 COPY speedtest-exporter.sh /usr/local/bin/speedtest-exporter.sh
+COPY ping.sh /usr/local/bin/ping.sh
 
 EXPOSE 9469
 
